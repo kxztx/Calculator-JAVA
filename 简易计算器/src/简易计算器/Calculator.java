@@ -1,4 +1,4 @@
-package ¼òÒ×¼ÆËãÆ÷;
+package ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -10,29 +10,29 @@ import javax.sound.sampled.*;
 public class Calculator extends JFrame implements ActionListener {
 
 	/**
-	 * 
+	 * hhh
 	 */
-	private static final long serialVersionUID = 1L;// Java¶ÔÏóÐòÁÐ»¯ÖÐµÄ°æ±¾±êÊ¾
-	// ¶¨ÒåÁ½¸ö×Ö·û´®£¬KEYSÓÃÀ´´æ·ÅÊý×ÖºÍÔËËã·û£¬COMMANDÓÃÀ´´æ·Å¹¦ÄÜ¼ü£¬ÇÒ¶¼ÓÃfinalÐÞÊÎ£¬²»¿ÉÒÔ¸ü¸Ä
+	private static final long serialVersionUID = 1L;// Javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ÐµÄ°æ±¾ï¿½ï¿½Ê¾
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½KEYSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½COMMANDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½finalï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½
 	private final String[] KEYS = { "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "+", "=" };
 	private final String[] COMMAND = { "Backspace", "Clear" };
-	// ÐÂ½¨´æ·ÅÊý×ÖºÍÔËËã·û°´Å¥µÄÃæ°å
+	// ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½
 	public JPanel calckeysPanel;
 	public JMenuItem item1;
 
-	// ÐÂ½¨¼ÆËãÆ÷ÉÏµÄÊý×ÖºÍÔËËã·û°´Å¥
+	// ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
 	private JButton keys[] = new JButton[KEYS.length];
-	// ÐÂ½¨¹¦ÄÜ¼ü°´Å¥
+	// ï¿½Â½ï¿½ï¿½ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½Å¥
 	private JButton commands[] = new JButton[COMMAND.length];
-	// ÏÔÊ¾¼ÆËã½á¹ûµÄÎÄ±¾¿ò£¬Ä¬ÈÏÏÔÊ¾0
+	// ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½Ê¾0
 	private JTextField resultText = new JTextField("0");
-	// ÅÐ¶ÏÓÃ»§ÊäÈëÓÃÓÚÔËËãµÄÒ»¸öÊýÊÇ·ñ½áÊø
+	// ï¿½Ð¶ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 	private boolean firstDigit = true;
 	private double resultNum = 0.0;
 	private String operator = "=";
-	// ÅÐ¶ÏÔËËãÊÇ·ñºÏ·¨
+	// ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½
 	private boolean operateValidFlag = true;
-	// ²úÉúËæ»úÉ«
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
 	Random random = new Random();
 	public int r1 = random.nextInt(255);
 	public int g1 = random.nextInt(255);
@@ -41,54 +41,54 @@ public class Calculator extends JFrame implements ActionListener {
 	public int g2 = random.nextInt(255);
 	public int b2 = random.nextInt(255);
 
-	// ¼ÆËãÆ÷¹¹ÔìÆ÷
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Calculator() {
 		super();
-		// ³õÊ¼»¯¼ÆËãÆ÷
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		init();
-		// ÉèÖÃ±êÌâ
-		this.setTitle("¼ÆËãÆ÷");
-		// ¼ÆËãÆ÷³öÏÖµÄÄ¬ÈÏ×ø±ê
+		// ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½
+		this.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		this.setLocation(100, 100);
-		// ¼ÆËãÆ÷´°¿Ú´óÐ¡²»¿É¸ü¸Ä
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ð¡ï¿½ï¿½ï¿½É¸ï¿½ï¿½ï¿½
 		this.setResizable(false);
-		// Ê¹ÈÝÆ÷ÕýºÃÈÝÄÉ×é¼þ£¬ÉèÖÃJFrameµÄ×îÓÅ³ß´ç
+		// Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½JFrameï¿½ï¿½ï¿½ï¿½ï¿½Å³ß´ï¿½
 		this.pack();
 
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ÊµÀý»¯
+		// Êµï¿½ï¿½ï¿½ï¿½
 		Calculator calculator1 = new Calculator();
-		// ÉèÖÃ¸Ã´°¿ÚÎª¿É¼û
+		// ï¿½ï¿½ï¿½Ã¸Ã´ï¿½ï¿½ï¿½Îªï¿½É¼ï¿½
 		calculator1.setVisible(true);
-		// µ÷ÓÃjava.lang.System.exit()·½·¨ÍË³ö³ÌÐò
+		// ï¿½ï¿½ï¿½ï¿½java.lang.System.exit()ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
 		calculator1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	// ³õÊ¼»¯µÄ·½·¨
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 	private void init() {
-		// ²¥·Å³ÌÐòÆô¶¯ÉùÒô
+		// ï¿½ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		playStartSound();
-		// ÎÄ±¾¿òÖÐµÄÎÄ×Ö²ÉÓÃÓÒ¶ÔÆë
+		// ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½
 		resultText.setHorizontalAlignment(JTextField.RIGHT);
-		// ÎÄ±¾¿òÄÚÈÝ²»¿ÉÈËÎªÐÞ¸Ä
+		// ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Þ¸ï¿½
 		resultText.setEditable(false);
-		// ÉèÖÃÎÄ±¾¿ò±³¾°É«
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ò±³¾ï¿½É«
 		resultText.setBackground(Color.white);
-		// ÉèÖÃÎÄ±¾¿ò×ÖÌåÊôÐÔ
-		resultText.setFont(new Font("ËÎÌå", Font.BOLD, 30));
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		resultText.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 30));
 
 		JMenuBar bar = new JMenuBar();
 		this.setJMenuBar(bar);
-		JMenu jm1 = new JMenu("¹¦ÄÜ");
+		JMenu jm1 = new JMenu("ï¿½ï¿½ï¿½ï¿½");
 		bar.add(jm1);
 		jm1.setPreferredSize(new Dimension(55, 20));
-		JMenu jm2 = new JMenu("°ïÖú");
+		JMenu jm2 = new JMenu("ï¿½ï¿½ï¿½ï¿½");
 		bar.add(jm2);
 
-		Action exitAction = new AbstractAction(" ÍË³ö", new ImageIcon("F:\\java\\ºìÉ«.jpg")) {
+		Action exitAction = new AbstractAction(" ï¿½Ë³ï¿½", new ImageIcon("F:\\java\\ï¿½ï¿½É«.jpg")) {
 
 			/**
 			 * 
@@ -103,8 +103,8 @@ public class Calculator extends JFrame implements ActionListener {
 
 		};
 		JMenuItem item3 = new JMenuItem("Ò»");
-		JMenuItem item4 = new JMenuItem("¶þ");
-		JMenuItem item5 = new JMenuItem("Èý");
+		JMenuItem item4 = new JMenuItem("ï¿½ï¿½");
+		JMenuItem item5 = new JMenuItem("ï¿½ï¿½");
 		jm1.add(item3);
 		jm1.add(item4);
 		jm1.add(item5);
@@ -116,7 +116,7 @@ public class Calculator extends JFrame implements ActionListener {
 		jm1.add(item1);
 		item1.setPreferredSize(new Dimension(80, 20));
 
-		Action aboutAction = new AbstractAction("¹ØÓÚ") {
+		Action aboutAction = new AbstractAction("ï¿½ï¿½ï¿½ï¿½") {
 
 			/**
 			 * 
@@ -127,7 +127,7 @@ public class Calculator extends JFrame implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				JOptionPane.showMessageDialog(null,
-						"<html><body><h1><i>Calculater</i></h1><hr>By T.X.Zhang</body></html>", "¹ØÓÚ",
+						"<html><body><h1><i>Calculater</i></h1><hr>By T.X.Zhang</body></html>", "ï¿½ï¿½ï¿½ï¿½",
 						JOptionPane.INFORMATION_MESSAGE);
 
 			}
@@ -138,57 +138,57 @@ public class Calculator extends JFrame implements ActionListener {
 		jm2.add(item2);
 		item2.setPreferredSize(new Dimension(80, 20));
 
-		// ÐÂ½¨·ÅÖÃÎÄ±¾¿òµÄÃæ°å
+		// ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		JPanel textPanel = new JPanel();
-		// Ãæ°åÖÐ×é¼þµÄ²¼¾Ö·½Ê½Îª±ß½ç²¼¾Ö
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ö·ï¿½Ê½Îªï¿½ß½ç²¼ï¿½ï¿½
 		textPanel.setLayout(new BorderLayout());
-		// ÏòÈÝÆ÷ÖÐÌí¼Ó×é¼þ£¬·ÅÖÃÔÚÈÝÆ÷ÖÐÑë
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		textPanel.add("Center", resultText);
 
-		// ÐÂ½¨·ÅÖÃ¹¦ÄÜ¼üµÄÃæ°å
+		// ï¿½Â½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		JPanel commandsPanel = new JPanel();
-		// ²¼¾Ö·½Ê½ÎªÍø¸ñ²¼¾Ö£¬Ò»ÐÐÁ½ÁÐ£¬Ãæ°åÖÐ×é¼þºáÏòºÍ×ÝÏò¼ä¸ôÎª3¸öÏñËØ
+		// ï¿½ï¿½ï¿½Ö·ï¿½Ê½Îªï¿½ï¿½ï¿½ñ²¼¾Ö£ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		commandsPanel.setLayout(new GridLayout(1, 2, 3, 3));
-		// ÉèÖÃ¹¦ÄÜ¼üÃæ°å±³¾°É«
+		// ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½å±³ï¿½ï¿½É«
 		commandsPanel.setBackground(new Color(r2, g2, b2));
-		// ÏòÃæ°åÖÐÌí¼Ó¹¦ÄÜ¼ü°´Å¥
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½Å¥
 		for (int i = 0; i < COMMAND.length; i++) {
 			commands[i] = new JButton(COMMAND[i]);
 			commandsPanel.add(commands[i]);
-			// ÉèÖÃÇ°¾°É«
+			// ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½É«
 			commands[i].setForeground(new Color(r2, g2, b2));
-			// ÉèÖÃ¹¦ÄÜ¼üµÄ×ÖÌåÊôÐÔ£¬ËÎÌå¡¢¼Ó´Ö¡¢30ºÅ×Ö
-			commands[i].setFont(new Font("ËÎÌå", Font.BOLD, 30));
+			// ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½å¡¢ï¿½Ó´Ö¡ï¿½30ï¿½ï¿½ï¿½ï¿½
+			commands[i].setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 30));
 		}
 
-		// ³õÊ¼»¯
+		// ï¿½ï¿½Ê¼ï¿½ï¿½
 		calckeysPanel = new JPanel();
-		// Ãæ°åÖÐ×é¼þµÄ²¼¾Ö·½Ê½ÎªËÄÐÐËÄÁÐµÄÍø¸ñ²¼¾Ö£¬×é¼þºáÏòºÍ×ÝÏò¼ä¸ô¶¼ÊÇ3¸öÏñËØ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ö·ï¿½Ê½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ñ²¼¾Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		calckeysPanel.setLayout(new GridLayout(4, 4, 3, 3));
-		// ÏòÃæ°åÖÐÌí¼ÓÊý×ÖºÍÔËËã·û°´Å¥
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
 		for (int i = 0; i < KEYS.length; i++) {
 			keys[i] = new JButton(KEYS[i]);
 			calckeysPanel.add(keys[i]);
-			// ÉèÖÃÇ°¾°É«
+			// ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½É«
 			keys[i].setForeground(new Color(r1, g1, b1));
-			// ÉèÖÃ×ÖÌåÊôÐÔÎªËÎÌå¡¢¼Ó´Ö¡¢30ºÅ×Ö
-			keys[i].setFont(new Font("ËÎÌå", Font.BOLD, 30));
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½å¡¢ï¿½Ó´Ö¡ï¿½30ï¿½ï¿½ï¿½ï¿½
+			keys[i].setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 30));
 		}
-		// ÉèÖÃÔËËã·û°´Å¥ÉÏµÄ×ÖÌåÑÕÉ«
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
 		keys[3].setForeground(new Color(r2, g2, b2));
 		keys[7].setForeground(new Color(r2, g2, b2));
 		keys[11].setForeground(new Color(r2, g2, b2));
 		keys[14].setForeground(new Color(r2, g2, b2));
 		keys[15].setForeground(new Color(r2, g2, b2));
 
-		// »ñµÃÄÚÈÝÃæ°å£¬²¼¾Ö·½Ê½Îª±ß½ç²¼¾Ö£¬¸÷¸ö×é¼þºáÏò¼ä¾àÎª3¸öÏñËØ£¬×ÝÏò¼ä¾àÎª5¸öÏñËØ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½Ö·ï¿½Ê½Îªï¿½ß½ç²¼ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª3ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		getContentPane().setLayout(new BorderLayout(3, 5));
-		// Ïò¿ò¼ÜÖÐÌí¼ÓÖ®Ç°ÐÂ½¨µÄÈý¸öÃæ°å£¬·Ö±ð·ÅÔÚÉÏ·½£¬ÖÐÑëºÍÏÂ·½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½
 		getContentPane().add("North", textPanel);
 		getContentPane().add("Center", commandsPanel);
 		getContentPane().add("South", calckeysPanel);
 
-		// Îª¸÷¸ö°´Å¥Ìí¼ÓÊÂ¼þ¼àÌýÆ÷
+		// Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < KEYS.length; i++) {
 			keys[i].addActionListener(this);
 		}
@@ -199,32 +199,32 @@ public class Calculator extends JFrame implements ActionListener {
 	}
 
 	@Override
-	// ÖØÐ´actionPerformed·½·¨ÊµÏÖ¶Ô°´ÏÂ°´Å¥ÊÂ¼þµÄ¼àÌý
+	// ï¿½ï¿½Ð´actionPerformedï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¶Ô°ï¿½ï¿½Â°ï¿½Å¥ï¿½Â¼ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		// »ñµÃ°´ÏÂµÄ°´¼ü
+		// ï¿½ï¿½Ã°ï¿½ï¿½ÂµÄ°ï¿½ï¿½ï¿½
 		String label = e.getActionCommand();
-		// ¸Ä±äÃæ°å±³¾°É«
+		// ï¿½Ä±ï¿½ï¿½ï¿½å±³ï¿½ï¿½É«
 		changeBackgroundColor();
 
-		// °´ÏÂÁËBackspace¼ü
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Backspaceï¿½ï¿½
 		if (label.equals(COMMAND[0])) {
 			handleBackspace();
 		} /**
 			 * else if(label.equals(item1)){ System.exit(0); }
 			 */
-		// °´ÏÂÁËClear¼ü
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Clearï¿½ï¿½
 		else if (label.equals(COMMAND[1])) {
 			handleC();
 			//playClickSound();
 			Sound s=new Sound();
 			s.start();
 		}
-		// °´ÏÂÁËÊý×Ö¼üºÍÐ¡Êýµã
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 		else if ("0123456789.".indexOf(label) >= 0) {
 			handleNumber(label);
 		}
-		// °´ÏÂÁËÔËËã·û¼ü
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		else {
 			handleOperator(label);
 		}
@@ -233,7 +233,7 @@ public class Calculator extends JFrame implements ActionListener {
 
 	private void changeBackgroundColor() {
 		// TODO Auto-generated method stub
-		// ÉèÖÃÊý×Ö¼üÃæ°å±³¾°É«
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½å±³ï¿½ï¿½É«
 		random = new Random();
 		int r3 = random.nextInt(255);
 		int g3 = random.nextInt(255);
@@ -241,23 +241,23 @@ public class Calculator extends JFrame implements ActionListener {
 		calckeysPanel.setBackground(new Color(r3, g3, b3));
 	}
 
-	// ÍË¸ñ·½·¨
+	// ï¿½Ë¸ñ·½·ï¿½
 	private void handleBackspace() {
-		// ½«½á¹û´æ·ÅÔÚ×Ö·û´®textÖÐ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½textï¿½ï¿½
 		String text = resultText.getText();
-		// ±äÁ¿i¼ÇÂ¼ÎÄ±¾µÄ³¤¶È
+		// ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½Â¼ï¿½Ä±ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
 		int i = text.length();
-		// Èç¹ûÓÐÎÄ±¾
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½
 		if (i > 0) {
-			// ½ØÈ¡³¤¶È´ÓµÚÒ»Î»µ½µ¹ÊýµÚÒ»Î»£¬Ïàµ±ÓÚÍË¸ñ
+			// ï¿½ï¿½È¡ï¿½ï¿½ï¿½È´Óµï¿½Ò»Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»ï¿½ï¿½ï¿½àµ±ï¿½ï¿½ï¿½Ë¸ï¿½
 			text = text.substring(0, i - 1);
-			// µ±É¾³ýµ½×îºóÒ»Î»Ê±£¬¸ü¸ÄÎª³õÊ¼»¯×´Ì¬
+			// ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê¼ï¿½ï¿½×´Ì¬
 			if (text.length() == 0) {
 				resultText.setText("0");
 				firstDigit = true;
 				operator = "=";
 			}
-			// Ã»ÓÐÉ¾µ½×îºóÒ»Î»Ê±¾Í½«ÐÂ½ØÈ¡µÄ×Ö·û´®ÏÔÊ¾µ½½á¹û¿òÖÐ
+			// Ã»ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»Ê±ï¿½Í½ï¿½ï¿½Â½ï¿½È¡ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			else {
 				resultText.setText(text);
 			}
@@ -265,74 +265,74 @@ public class Calculator extends JFrame implements ActionListener {
 
 	}
 
-	// ÇåÁã·½·¨£¬¸ü¸ÄÎª³õÊ¼×´Ì¬
+	// ï¿½ï¿½ï¿½ã·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê¼×´Ì¬
 	private void handleC() {
 		resultText.setText("0");
 		firstDigit = true;
 		operator = "=";
 	}
 
-	// ÊäÈëÊý×ÖºÍÐ¡ÊýµãµÄ·½·¨
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 	private void handleNumber(String key) {
 		if (firstDigit) {
-			// ÊäÈëµÚÒ»¸öÊý×Ö
+			// ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultText.setText(key);
 		} else if (key.equals(".") && resultText.getText().indexOf(".") < 0) {
-			// Èç¹û°´ÏÂÐ¡ÊýµãÇÒÖ®Ç°Ã»ÓÐ°´¹ýÐ¡Êýµã°´¼ü£¬¾Í½«Ð¡ÊýµãÊäÈë½øÈ¥
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°Ã»ï¿½Ð°ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ã°´ï¿½ï¿½ï¿½ï¿½ï¿½Í½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
 			resultText.setText(resultText.getText() + ".");
 		} else if (!key.equals(".")) {
-			// Èç¹ûÃ»ÓÐ°´Ð¡Êýµã£¬¾Í½«°´ÏÂµÄÆäËûÊý×Ö¼ü¶ÔÓ¦µÄÊý×ÖÊäÈë½øÈ¥£¬ÊµÏÖ¶àÎ»ÊýµÄÊäÈë
+			// ï¿½ï¿½ï¿½Ã»ï¿½Ð°ï¿½Ð¡ï¿½ï¿½ï¿½ã£¬ï¿½Í½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Êµï¿½Ö¶ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultText.setText(resultText.getText() + key);
 		}
-		// µÚÒ»¸öÊýÊäÈëÍê³É
+		// ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		firstDigit = false;
 	}
 
-	// ´¦Àí°´ÏÂÔËËã·û¼üµÄ·½·¨
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 	private void handleOperator(String key) {
-		// °´ÏÂ¡°/¡±¼ü
+		// ï¿½ï¿½ï¿½Â¡ï¿½/ï¿½ï¿½ï¿½ï¿½
 		if (operator.equals("/")) {
-			// Èç¹ûÎÄ±¾¿òÖÐÊý×ÖÎªÁã
+			// ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
 			if (getNumberFromText() == 0.0) {
-				// ·Ç·¨²Ù×÷
+				// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½
 				operateValidFlag = false;
-				resultText.setText("³ýÊý²»ÄÜÎªÁã!");
+				resultText.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½!");
 			} else {
-				// ³ý·¨ÔËËã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				resultNum /= getNumberFromText();
 			}
 		}
-		// °´ÏÂ¡°+¡±¼ü
+		// ï¿½ï¿½ï¿½Â¡ï¿½+ï¿½ï¿½ï¿½ï¿½
 		else if (operator.equals("+")) {
-			// ¼Ó·¨ÔËËã
+			// ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultNum += getNumberFromText();
 		}
-		// °´ÏÂ¡°-¡±¼ü
+		// ï¿½ï¿½ï¿½Â¡ï¿½-ï¿½ï¿½ï¿½ï¿½
 		else if (operator.equals("-")) {
-			// ¼õ·¨ÔËËã
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultNum -= getNumberFromText();
 		}
-		// °´ÏÂ¡°*¡±¼ü
+		// ï¿½ï¿½ï¿½Â¡ï¿½*ï¿½ï¿½ï¿½ï¿½
 		else if (operator.equals("*")) {
-			// ³Ë·¨ÔËËã
+			// ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultNum *= getNumberFromText();
 		}
-		// °´ÏÂ¡°=¡±¼ü
+		// ï¿½ï¿½ï¿½Â¡ï¿½=ï¿½ï¿½ï¿½ï¿½
 		else if (operator.equals("=")) {
-			// ½«ÎÄ±¾¿òÖÐµÄÊý×Ö¸³Öµ¸ø½á¹û
+			// ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½
 			resultNum = getNumberFromText();
 		}
-		// Ë«¾«¶È¸¡µãÊýÔËËã
+		// Ë«ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (operateValidFlag) {
 			long t1;
 			double t2;
 			t1 = (long) resultNum;
 			t2 = resultNum - t1;
 			if (t2 == 0) {
-				// ×ª»¯Îª×Ö·û´®ÊäÈëµ½½á¹ûÎÄ±¾¿òÖÐ
+				// ×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
 				resultText.setText(String.valueOf(t1));
 			} else {
-				// Í¬ÉÏ
+				// Í¬ï¿½ï¿½
 				resultText.setText(String.valueOf(resultNum));
 			}
 		}
@@ -341,10 +341,10 @@ public class Calculator extends JFrame implements ActionListener {
 		operateValidFlag = true;
 	}
 
-	// ´ÓÎÄ±¾¿òÖÐ»ñµÃÊý×Ö
+	// ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private double getNumberFromText() {
 		double result = 0;
-		// Òì³£´¦Àí
+		// ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
 		try {
 			result = Double.valueOf(resultText.getText()).doubleValue();
 		} catch (NumberFormatException e) {
@@ -354,11 +354,11 @@ public class Calculator extends JFrame implements ActionListener {
 	}
 
 	private void playClickSound() {
-		Play("F:\\java\\ÌáÊ¾Òô.wav");
+		Play("F:\\java\\ï¿½ï¿½Ê¾ï¿½ï¿½.wav");
 	}
 
 	private void playStartSound() {
-		Play("F:\\java\\µÇÂ¼Òô.wav");
+		Play("F:\\java\\ï¿½ï¿½Â¼ï¿½ï¿½.wav");
 	}
 
 	private void Play(String fileurl) {
